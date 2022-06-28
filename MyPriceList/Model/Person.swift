@@ -19,4 +19,6 @@ class Person: Object {
     @Persisted var body = ""
     @Persisted var numberFlat = ""
     @Persisted var personDescription = ""
+    @Persisted var data = Date()
+    
 }

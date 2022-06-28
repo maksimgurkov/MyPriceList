@@ -21,6 +21,12 @@ class StorageManager {
         }
     }
     
+    func delete(_ person: Person) {
+        write {
+            realm.delete(person)
+        }
+    }
+    
     private func write(completion: () -> Void) {
         do {
             try realm.write{
