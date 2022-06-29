@@ -36,13 +36,11 @@ class PersonsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath) as! PersonCellTableViewCell
         let person = persons[indexPath.row]
-        cell.fulNamePersonLabel.text = person.name
+        cell.fulNamePersonLabel.text = "\(person.name) \(person.patronymic)"
+        cell.surNamePersonLabel.text = person.surName
+        cell.fulAddressPersonLabel.text = "\(person.town) \(person.strit) \(person.numberHouse) \(person.body) \(person.numberFlat)"
         cell.datePersonLabel.text = "\(person.data)"
-//        cell.fulAddressPersonLabel.text = "\(person.town), \(person.strit), \(person.numberHouse), \(person.body), \(person.numberFlat)"
-//        var content = cell.defaultContentConfiguration()
-//        content.text = person.name
-//        content.secondaryText = person.surName
-//        cell.contentConfiguration = content
+        
         return cell
     }
     

@@ -35,16 +35,25 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дом" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pbk-ly-FZM">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="uLg-m0-Fj9"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Корпус" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wbk-a8-Ic7">
                                         <rect key="frame" x="74" y="0.0" width="77" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="77" id="72j-Ga-akZ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Квартира" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Eci-py-7qh">
                                         <rect key="frame" x="168" y="0.0" width="92" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="qFs-xK-18m"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
@@ -112,7 +121,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="savePersonButton" destination="I1F-y2-Cx0" eventType="touchUpInside" id="TCO-P9-SZn"/>
+                                    <action selector="savePersonButtonAction" destination="I1F-y2-Cx0" eventType="touchUpInside" id="2IF-GH-RPg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,9 +146,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bodyPersonTextField" destination="Wbk-a8-Ic7" id="3j9-XR-sgM"/>
+                        <outlet property="descriptionTextField" destination="jkX-BL-sG9" id="fDu-eL-VJ7"/>
                         <outlet property="nameTextField" destination="p6e-oD-xSh" id="W9C-RH-rdJ"/>
+                        <outlet property="numberFlatPersonTextField" destination="Eci-py-7qh" id="9h3-rY-u3W"/>
+                        <outlet property="numberHousePersonTextField" destination="Pbk-ly-FZM" id="1O7-Ye-I1z"/>
+                        <outlet property="patronymicPersonTextField" destination="JMI-QF-9Zh" id="3sq-Jj-BiE"/>
+                        <outlet property="phonePersonTextField" destination="Hoe-HG-A2p" id="njA-SB-MrY"/>
                         <outlet property="savePersonButton" destination="aJn-m8-uVw" id="Ms3-m5-jgB"/>
+                        <outlet property="stritPersonTexttField" destination="eSa-AN-7DR" id="GYz-ST-lXN"/>
                         <outlet property="surNameTextField" destination="rPD-ua-FV2" id="lEo-dY-BqR"/>
+                        <outlet property="townPersonTextField" destination="18y-sC-KE2" id="3WG-bj-Rnz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFf-BV-8OF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,8 +222,10 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="datePersonLabel" destination="FlT-ry-fCt" id="khl-v8-CbW"/>
+                                    <outlet property="fulAddressPersonLabel" destination="su2-Yk-ACF" id="ygM-Qn-IJH"/>
                                     <outlet property="fulNamePersonLabel" destination="oaA-RQ-l5y" id="oZX-FW-5HO"/>
-                                    <segue destination="Pde-gV-76b" kind="show" id="fvP-uY-DEX"/>
+                                    <outlet property="surNamePersonLabel" destination="yem-X9-7ZU" id="TpC-42-19t"/>
+                                    <segue destination="xhw-pC-o1H" kind="show" id="KaS-Od-AhQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -227,34 +246,21 @@
             </objects>
             <point key="canvasLocation" x="380.48780487804879" y="-14.237288135593221"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="mS7-B4-VaF">
+        <!--View Controller-->
+        <scene sceneID="T1H-RJ-avE">
             <objects>
-                <tableViewController id="Pde-gV-76b" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2Ch-yE-1vl">
+                <viewController id="xhw-pC-o1H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BKo-IU-9eB">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pKF-wU-uJn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="Oud-tb-vKe">
-                                <rect key="frame" x="0.0" y="44.5" width="820" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oud-tb-vKe" id="830-z2-7CU">
-                                    <rect key="frame" x="0.0" y="0.0" width="820" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Pde-gV-76b" id="mVW-pX-mUR"/>
-                            <outlet property="delegate" destination="Pde-gV-76b" id="uuw-92-ejs"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="xxh-vX-16g"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7WX-nY-yyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8WX-Hi-nxe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aC3-5p-dkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="-14"/>
+            <point key="canvasLocation" x="1062" y="-14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zFb-TH-iJ1">
