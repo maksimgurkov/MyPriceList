@@ -19,7 +19,12 @@
 		762BDCDD286AE21400C5D85F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762BDCDC286AE21400C5D85F /* StorageManager.swift */; };
 		762BDCE0286B19DE00C5D85F /* PersonCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762BDCDF286B19DE00C5D85F /* PersonCellTableViewCell.swift */; };
 		76353812286C435500F3321E /* InfoPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76353811286C435500F3321E /* InfoPersonViewController.swift */; };
-		76353814286C4E4000F3321E /* KategoriyProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76353813286C4E4000F3321E /* KategoriyProductTableViewController.swift */; };
+		76353814286C4E4000F3321E /* FactoryProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76353813286C4E4000F3321E /* FactoryProductTableViewController.swift */; };
+		76B7D21C286D891C003522AA /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7D21B286D891C003522AA /* Door.swift */; };
+		76B7D21E286D8D41003522AA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7D21D286D8D41003522AA /* DataManager.swift */; };
+		76B7D220286D9912003522AA /* FactoryDoorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7D21F286D9912003522AA /* FactoryDoorsTableViewCell.swift */; };
+		76B7D222286DA07A003522AA /* MaterialDoorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7D221286DA07A003522AA /* MaterialDoorsTableViewController.swift */; };
+		76B7D224286DA62C003522AA /* ListDoorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7D223286DA62C003522AA /* ListDoorsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +41,12 @@
 		762BDCDC286AE21400C5D85F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		762BDCDF286B19DE00C5D85F /* PersonCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellTableViewCell.swift; sourceTree = "<group>"; };
 		76353811286C435500F3321E /* InfoPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPersonViewController.swift; sourceTree = "<group>"; };
-		76353813286C4E4000F3321E /* KategoriyProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriyProductTableViewController.swift; sourceTree = "<group>"; };
+		76353813286C4E4000F3321E /* FactoryProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProductTableViewController.swift; sourceTree = "<group>"; };
+		76B7D21B286D891C003522AA /* Door.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
+		76B7D21D286D8D41003522AA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		76B7D21F286D9912003522AA /* FactoryDoorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryDoorsTableViewCell.swift; sourceTree = "<group>"; };
+		76B7D221286DA07A003522AA /* MaterialDoorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialDoorsTableViewController.swift; sourceTree = "<group>"; };
+		76B7D223286DA62C003522AA /* ListDoorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDoorsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +108,9 @@
 				762BDCD3286ADB4600C5D85F /* AppendInfoPersonViewController.swift */,
 				762BDCD1286AD33500C5D85F /* PersonsTableViewController.swift */,
 				76353811286C435500F3321E /* InfoPersonViewController.swift */,
-				76353813286C4E4000F3321E /* KategoriyProductTableViewController.swift */,
+				76353813286C4E4000F3321E /* FactoryProductTableViewController.swift */,
+				76B7D221286DA07A003522AA /* MaterialDoorsTableViewController.swift */,
+				76B7D223286DA62C003522AA /* ListDoorsTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				762BDCD9286AE02400C5D85F /* Person.swift */,
+				76B7D21B286D891C003522AA /* Door.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				762BDCDC286AE21400C5D85F /* StorageManager.swift */,
+				76B7D21D286D8D41003522AA /* DataManager.swift */,
 			);
 			path = Servces;
 			sourceTree = "<group>";
@@ -123,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				762BDCDF286B19DE00C5D85F /* PersonCellTableViewCell.swift */,
+				76B7D21F286D9912003522AA /* FactoryDoorsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -204,15 +219,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B7D220286D9912003522AA /* FactoryDoorsTableViewCell.swift in Sources */,
 				762BDCDA286AE02400C5D85F /* Person.swift in Sources */,
 				762BDCBC286AD12D00C5D85F /* AppDelegate.swift in Sources */,
 				762BDCD4286ADB4600C5D85F /* AppendInfoPersonViewController.swift in Sources */,
+				76B7D21C286D891C003522AA /* Door.swift in Sources */,
 				76353812286C435500F3321E /* InfoPersonViewController.swift in Sources */,
 				762BDCDD286AE21400C5D85F /* StorageManager.swift in Sources */,
 				762BDCBE286AD12D00C5D85F /* SceneDelegate.swift in Sources */,
+				76B7D222286DA07A003522AA /* MaterialDoorsTableViewController.swift in Sources */,
 				762BDCE0286B19DE00C5D85F /* PersonCellTableViewCell.swift in Sources */,
+				76B7D21E286D8D41003522AA /* DataManager.swift in Sources */,
+				76B7D224286DA62C003522AA /* ListDoorsTableViewController.swift in Sources */,
 				762BDCD2286AD33500C5D85F /* PersonsTableViewController.swift in Sources */,
-				76353814286C4E4000F3321E /* KategoriyProductTableViewController.swift in Sources */,
+				76353814286C4E4000F3321E /* FactoryProductTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
